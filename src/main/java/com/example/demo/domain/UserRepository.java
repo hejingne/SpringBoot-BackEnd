@@ -1,6 +1,8 @@
 package com.example.demo.domain;
 
+import java.util.List;
+
 public interface UserRepository {
 	User createUser(User user);
-	// find all
+	List<User> findAll();
 }

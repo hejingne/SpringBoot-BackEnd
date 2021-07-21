@@ -2,6 +2,8 @@ package com.example.demo.infrastructure;
 
 import com.example.demo.domain.User;
 import com.example.demo.domain.UserRepository;
+import java.util.List;
+import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -16,5 +18,8 @@ public class HibernateUserRepository implements UserRepository {
 		return new User(userEntity.getId(), userEntity.getName());
 	}
 
-	// find all
+	@Override
+	public List<User> findAll() {
+		return springDataHibernateUserRepository.findAll().forEach(userEntity -> new User(userEntity.getId(), userEntity.getName())).collect(Collectors.toList());
+	}
 }

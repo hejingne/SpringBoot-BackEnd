@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.infrastructure;
 
+import com.example.demo.domain.User;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.domain;
 
 public class DomainException extends Exception {
 	public DomainException(String errorMsg) {

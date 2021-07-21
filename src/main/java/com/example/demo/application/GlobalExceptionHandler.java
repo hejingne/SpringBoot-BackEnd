@@ -1,5 +1,7 @@
-package com.example.demo;
+package com.example.demo.application;
 
+import com.example.demo.domain.DomainException;
+import com.example.demo.domain.InvalidNameException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

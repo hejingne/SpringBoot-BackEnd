@@ -1,6 +1,5 @@
-package com.example.demo;
+package com.example.demo.domain;
 
-import lombok.Data;		// we don't want to have setters
 import lombok.Getter;
 
 @Getter

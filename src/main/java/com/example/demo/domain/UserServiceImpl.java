@@ -17,20 +17,14 @@ public class UserServiceImpl implements UserService {	// Business Logic Layer
 	}
 
 	@Override
-	public List<User> getUsers() throws DomainException {
-		List<UserEntity> userEntityList = userRepository.findAll();
-		List<User> userList = new ArrayList<>();
-		for (UserEntity userEntity:userEntityList) {
-			userList.add(new User(userEntity.getId(), userEntity.getName()));
-		}
-		return userList;
+	public List<User> getUsers(){
+		return userRepository.findAll();
 	}
 
 	@Override
-	public User createUser(Long id, String name) throws DomainException{
-		User user = userRepository.createUser(new User(id, name)); // save -> create a new entry if it can't find the id specified /
+	public User createUser(Long id, String name){
+		return userRepository.createUser(new User(id, name)); // save -> create a new entry if it can't find the id specified /
 																					// update otherwise
-		return new User(user.getId(), user.getName());
 	}
 
 }

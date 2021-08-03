@@ -20,6 +20,6 @@ public class HibernateUserRepository implements UserRepository {
 
 	@Override
 	public List<User> findAll() {
-		return springDataHibernateUserRepository.findAll().forEach(userEntity -> new User(userEntity.getId(), userEntity.getName())).collect(Collectors.toList());
+		return springDataHibernateUserRepository.findAll().stream().map(userEntity -> new User(userEntity.getId(), userEntity.getName())).collect(Collectors.toList());
 	}
 }

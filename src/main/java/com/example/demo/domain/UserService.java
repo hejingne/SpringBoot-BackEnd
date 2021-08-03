@@ -4,8 +4,8 @@ import java.util.List;
 
 public interface UserService {
 
-	List<User> getUsers() throws DomainException;
+	List<User> getUsers();
 
-	User createUser(Long id, String name) throws DomainException;
+	User createUser(Long id, String name);
 
 }

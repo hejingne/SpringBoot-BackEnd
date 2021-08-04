@@ -9,7 +9,7 @@ public class User {
 
 	public User(Long id, String name) throws DomainException {
 		this.id = id;
-		updateName(name);
+		this.name = name;
 	}
 
 	public void updateName(String name) throws InvalidNameException {
